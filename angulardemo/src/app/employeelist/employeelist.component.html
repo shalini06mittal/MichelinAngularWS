@@ -1,0 +1,13 @@
+<h3>Employees Information!!</h3>
+<div *ngIf="employeesdata.length==0;else content">
+    <p>No employees found!!</p>
+</div>
+
+<ng-template #content>
+    <!-- <p>content goes here</p> -->
+    <div *ngFor="let emp of employeesdata">
+        <app-employee [employee]="emp"></app-employee>
+<!-- <p>{{employee | json}}</p> -->
+
+    </div>
+</ng-template>
