@@ -10,6 +10,9 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './lifecycle/child.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { HoverDirective } from './directives/hover.directive';
+
 //  l1:LifecylceCOmponent = new LifecylceComponent()
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { ChildComponent } from './lifecycle/child.component';
     EmployeeComponent,
     EmployeelistComponent,
     LifecycleComponent,
-    ChildComponent
+    ChildComponent,
+    DirectivesComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
