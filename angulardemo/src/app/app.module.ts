@@ -12,7 +12,12 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './lifecycle/child.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HoverDirective } from './directives/hover.directive';
-
+import { PipesComponent } from './pipes/pipes.component';
+import { PowerPipe } from './pipes/power.pipe';
+import { registerLocaleData } from '@angular/common'; 
+import localeFr from '@angular/common/locales/fr'; 
+// the second parameter 'fr' is optional 
+registerLocaleData(localeFr, 'fr');
 //  l1:LifecylceCOmponent = new LifecylceComponent()
 @NgModule({
   declarations: [
@@ -24,7 +29,9 @@ import { HoverDirective } from './directives/hover.directive';
     LifecycleComponent,
     ChildComponent,
     DirectivesComponent,
-    HoverDirective
+    HoverDirective,
+    PipesComponent,
+    PowerPipe
   ],
   imports: [
     BrowserModule,
