@@ -15,7 +15,8 @@ import { HoverDirective } from './directives/hover.directive';
 import { PipesComponent } from './pipes/pipes.component';
 import { PowerPipe } from './pipes/power.pipe';
 import { registerLocaleData } from '@angular/common'; 
-import localeFr from '@angular/common/locales/fr'; 
+import localeFr from '@angular/common/locales/fr';
+import { EmpformComponent } from './empform/empform.component'; 
 // the second parameter 'fr' is optional 
 registerLocaleData(localeFr, 'fr');
 //  l1:LifecylceCOmponent = new LifecylceComponent()
@@ -31,7 +32,8 @@ registerLocaleData(localeFr, 'fr');
     DirectivesComponent,
     HoverDirective,
     PipesComponent,
-    PowerPipe
+    PowerPipe,
+    EmpformComponent
   ],
   imports: [
     BrowserModule,
