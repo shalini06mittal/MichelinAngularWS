@@ -5,9 +5,9 @@ export interface Employee{
     phone:string,
     password:string,
     address:{
-    city?:string,
-    country:string,
-    zipcode?:number
+        city?:string,
+        country:string,
+        zipcode?:number
     }
 }
 

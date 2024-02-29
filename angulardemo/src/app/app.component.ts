@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './model/employee';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,20 @@ export class AppComponent {
   x:number = 10
   isEnabled:boolean =  false
   username:string = 'Shalini';
+  showaddEmpForm:boolean = false;
   
   clicked(){
     alert('clicked')
     this.title = 'Hey I cam changed'
   }
+
+  newemp:Employee | null = null;
+
+  newEmpAdded(employee:any){
+      this.newemp = employee;
+      console.log(this.newemp);
+  }
+  // openEmpForm(){
+  //   this.showaddEmpForm = !this.showaddEmpForm;
+  // }
 }
