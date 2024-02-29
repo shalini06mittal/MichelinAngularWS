@@ -17,7 +17,10 @@ import { PowerPipe } from './pipes/power.pipe';
 import { registerLocaleData } from '@angular/common'; 
 import localeFr from '@angular/common/locales/fr';
 import { EmpformComponent } from './empform/empform.component';
-import { EmpreactiveformComponent } from './empreactiveform/empreactiveform.component'; 
+import { EmpreactiveformComponent } from './empreactiveform/empreactiveform.component';
+import { EmpeditformComponent } from './empeditform/empeditform.component';
+import { ServiceComponent } from './service/service.component';
+ 
 // the second parameter 'fr' is optional 
 registerLocaleData(localeFr, 'fr');
 //  l1:LifecylceCOmponent = new LifecylceComponent()
@@ -35,7 +38,9 @@ registerLocaleData(localeFr, 'fr');
     PipesComponent,
     PowerPipe,
     EmpformComponent,
-    EmpreactiveformComponent
+    EmpreactiveformComponent,
+    EmpeditformComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,

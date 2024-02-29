@@ -3,13 +3,17 @@
   <!-- <button (click)="showaddEmpForm = !showaddEmpForm">Add New Employee</button>
   <div *ngIf="showaddEmpForm">
   <app-empform (empadded)="newEmpAdded($event)"></app-empform>
-</div> -->
-  <!-- <app-employeelist [newemp]="newemp"></app-employeelist> -->
+</div>
+  <app-employeelist [newemp]="newemp"></app-employeelist> -->
   <!-- <app-employee></app-employee> -->
   <!-- <app-lifecycle></app-lifecycle> -->
   <!-- <app-directives></app-directives> -->
   <!-- <app-pipes></app-pipes> -->
-  <app-empreactiveform></app-empreactiveform>
+  <!-- <app-empreactiveform></app-empreactiveform> -->
+  <h4>App Component Using Service</h4>
+  {{service.message}}
+  <hr/>
+  <app-service></app-service>
 </div>
 
 <app-footer></app-footer>

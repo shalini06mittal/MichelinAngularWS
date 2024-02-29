@@ -6,7 +6,20 @@
 <ng-template #content>
     <!-- <p>content goes here</p> -->
     <div *ngFor="let emp of employeesdata">
-        <app-employee [employee]="emp"></app-employee>
+        <div class="row">
+        <div class="col-md-6">
+        <app-employee [employee]="emp">
+            <!-- Children of app employee -->
+            <button class="btn btn-primary" (click)="deleteEmp(emp.eid)">Delete</button>
+            <button class="btn btn-primary" (click)="editEmp(emp.eid)">Edit</button>
+        </app-employee>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="showEditForm && emp.eid === editid">
+            <app-empeditform></app-empeditform>
+        </div>
+    </div>
+    </div>
 <!-- <p>{{employee | json}}</p> -->
 
     </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from './model/employee';
+import { DemoService } from './service/demo.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,8 @@ export class AppComponent {
   username:string = 'Shalini';
   showaddEmpForm:boolean = false;
   
+constructor(public service:DemoService){}
+
   clicked(){
     alert('clicked')
     this.title = 'Hey I cam changed'
