@@ -1,0 +1,24 @@
+<div class="mb-4">
+    <h3>Reactive Driven Form Demo</h3>
+    <p>{{form.value | json}}</p>
+    <p>{{form.status | json}}</p>
+    <form [formGroup]="form">
+    <!-- <input type="text" placeholder="Enter" 
+    name="name" class="form-control" [formControl]="name" /> -->
+    <input type="text" placeholder="Enter" 
+    name="name" class="form-control" formControlName="name" />
+    <div *ngIf="name.invalid && name.errors?.['required']">
+        <span class="text-danger">Name is required</span>
+        </div>
+    <input type="text" placeholder="Enter" 
+    name="phone" class="form-control" formControlName="phone" />
+    <div *ngIf="form.controls['phone'].invalid">
+        <div *ngIf="form.controls['phone'].errors?.['required']"> 
+            <span class="text-danger">Phone is required</span>
+        </div>
+        <div *ngIf="form.controls['phone'].errors?.['minlength']"> 
+            <span class="text-danger">Phone should be 10 digits</span>
+        </div>
+    </div>
+    </form>
+</div>

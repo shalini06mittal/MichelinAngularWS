@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -16,7 +16,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { PowerPipe } from './pipes/power.pipe';
 import { registerLocaleData } from '@angular/common'; 
 import localeFr from '@angular/common/locales/fr';
-import { EmpformComponent } from './empform/empform.component'; 
+import { EmpformComponent } from './empform/empform.component';
+import { EmpreactiveformComponent } from './empreactiveform/empreactiveform.component'; 
 // the second parameter 'fr' is optional 
 registerLocaleData(localeFr, 'fr');
 //  l1:LifecylceCOmponent = new LifecylceComponent()
@@ -33,12 +34,13 @@ registerLocaleData(localeFr, 'fr');
     HoverDirective,
     PipesComponent,
     PowerPipe,
-    EmpformComponent
+    EmpformComponent,
+    EmpreactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
