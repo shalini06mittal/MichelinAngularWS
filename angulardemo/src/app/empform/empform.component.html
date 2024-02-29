@@ -1,6 +1,6 @@
 <div class="mb-3">
     <h3>Add Employee Infromation</h3>
-    <pre>{{empform.value | json}}</pre>
+    <pre ngNonBindable>{{empform.value | json}}</pre>
     <pre>{{empform.status}}</pre>
     <form #empform="ngForm">
         <input type="text" placeholder="Enter name" required
