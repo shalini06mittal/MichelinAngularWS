@@ -1,11 +1,14 @@
 <app-header></app-header>
 <div class="container">
   <!-- <app-observables></app-observables> -->
-  <button (click)="showaddEmpForm = !showaddEmpForm">Add New Employee</button>
+  
+  <router-outlet></router-outlet>
+  
+  <!-- <button (click)="showaddEmpForm = !showaddEmpForm">Add New Employee</button>
   <div *ngIf="showaddEmpForm">
   <app-empform (empadded)="newEmpAdded($event)"></app-empform>
 </div>
-  <app-employeelist [newemp]="newemp"></app-employeelist>
+  <app-employeelist [newemp]="newemp"></app-employeelist> -->
   <!-- <app-employee></app-employee> -->
   <!-- <app-lifecycle></app-lifecycle> -->
   <!-- <app-directives></app-directives> -->

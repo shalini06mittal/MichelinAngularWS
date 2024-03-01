@@ -21,7 +21,9 @@ import { EmpreactiveformComponent } from './empreactiveform/empreactiveform.comp
 import { EmpeditformComponent } from './empeditform/empeditform.component';
 import { ServiceComponent } from './service/service.component';
 import { ObservablesComponent } from './observables/observables.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
  
 // the second parameter 'fr' is optional 
 registerLocaleData(localeFr, 'fr');
@@ -43,7 +45,9 @@ registerLocaleData(localeFr, 'fr');
     EmpreactiveformComponent,
     EmpeditformComponent,
     ServiceComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    LoginComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
