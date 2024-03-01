@@ -20,6 +20,8 @@ import { EmpformComponent } from './empform/empform.component';
 import { EmpreactiveformComponent } from './empreactiveform/empreactiveform.component';
 import { EmpeditformComponent } from './empeditform/empeditform.component';
 import { ServiceComponent } from './service/service.component';
+import { ObservablesComponent } from './observables/observables.component';
+import {HttpClientModule} from '@angular/common/http'
  
 // the second parameter 'fr' is optional 
 registerLocaleData(localeFr, 'fr');
@@ -40,12 +42,13 @@ registerLocaleData(localeFr, 'fr');
     EmpformComponent,
     EmpreactiveformComponent,
     EmpeditformComponent,
-    ServiceComponent
+    ServiceComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

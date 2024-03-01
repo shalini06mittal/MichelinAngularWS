@@ -1,0 +1,17 @@
+<div class="mb-5">
+<h3>Observable Demo</h3>
+<div *ngFor="let fruit of fruits">
+    <p>{{fruit}}</p>
+</div>
+<b>Error Status</b>
+{{anyErrors ? 'error occured':'All Good'}}
+<hr/>
+<div>
+    <b>Completion Status:</b>
+    {{finished? 'Completed':''}}
+</div>
+<button (click)="start()">Produce Fruits</button>
+
+<p>{{title}}</p>
+<button (click)="getUsers()">Get</button>
+</div>
