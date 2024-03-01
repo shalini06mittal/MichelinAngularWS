@@ -23,7 +23,9 @@ import { ServiceComponent } from './service/service.component';
 import { ObservablesComponent } from './observables/observables.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfiledetailComponent } from './profiledetail/profiledetail.component'
  
 // the second parameter 'fr' is optional 
 registerLocaleData(localeFr, 'fr');
@@ -47,7 +49,9 @@ registerLocaleData(localeFr, 'fr');
     ServiceComponent,
     ObservablesComponent,
     LoginComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ProfileComponent,
+    ProfiledetailComponent
   ],
   imports: [
     BrowserModule,

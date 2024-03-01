@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  
+  login(data:any){
+    console.log(data)
+    if(data.email === 's@g.c' && data.password === 'shalini'){
+      sessionStorage.setItem('email', data.email)
+    }
+    else{
+      alert('error login')
+    }
+  }
 }

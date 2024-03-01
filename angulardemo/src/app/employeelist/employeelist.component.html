@@ -1,4 +1,5 @@
 <h3>Employees Information!!</h3>
+Id visited: {{selid}}
 <div *ngIf="employeesdata.length==0;else content">
     <p>No employees found!!</p>
 </div>
@@ -8,11 +9,12 @@
     <div *ngFor="let emp of employeesdata">
         <div class="row">
         <div class="col-md-6">
+        
         <app-employee [employee]="emp">
             <!-- Children of app employee -->
-            <button class="btn btn-primary" (click)="deleteEmp(emp.eid)">Delete</button>
-            <button class="btn btn-primary" (click)="editEmp(emp.eid)">Edit</button>
-            
+            <button class="btn btn-primary m-2" (click)="deleteEmp(emp.eid)">Delete</button>
+            <button class="btn btn-primary m-2" (click)="editEmp(emp.eid)">Edit</button>
+            <button class="btn btn-primary" (click)="viewProfile(emp.eid)" [class.border]="isSelected(emp.eid)">Profile</button>
         </app-employee>
     </div>
     <div class="col-md-6">

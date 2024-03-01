@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Employee } from '../model/employee';
 import { employees } from '../model/data';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmphttpService } from '../service/emphttp.service';
 
 @Component({
@@ -17,12 +17,16 @@ export class EmployeelistComponent implements OnChanges, OnInit{
 
   showEditForm:boolean = false
   editid:number = 0;
+  selid:any = 0;
 
-  constructor(route:ActivatedRoute, private es:EmphttpService){
+  constructor(private router:Router, private route:ActivatedRoute, private es:EmphttpService){
     this.employeesdata = employees;
     
   }
   ngOnInit(): void {
+    
+    this.route.queryParams.subscribe(params => this.selid = params['id'])
+
     this.es.getAllEmployees().subscribe(response=> this.employeesdata = response)
   }
   ngOnChanges(changes: SimpleChanges): void {
@@ -44,4 +48,15 @@ export class EmployeelistComponent implements OnChanges, OnInit{
     this.showEditForm = !this.showEditForm
     this.editid = parseInt(eid)
   }
+
+  viewProfile(eid:any){
+
+    //this.router.navigate(['employees', eid])
+    this.router.navigate([eid],{relativeTo:this.route})
+  }
+
+  isSelected(empid:any):boolean{
+    console.log(empid === this.selid)
+    return empid === this.selid;
+    }
 }

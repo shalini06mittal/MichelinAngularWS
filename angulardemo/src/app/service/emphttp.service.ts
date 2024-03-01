@@ -13,7 +13,7 @@ export class EmphttpService {
   getAllEmployees(): Observable<any> {
     return this.http.get<any>(this.url);
   }
-  getEmployeeById(eid: number): Observable<Employee> {
+  getEmployeeById(eid:any): Observable<Employee> {
     return this.http.get<Employee>(this.url + '/' + eid);
   }
   addEmployee(employee: Employee): Observable<Employee> {
